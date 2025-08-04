@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSphere - Home</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="ShopSphere Logo" />
+      <h1>ShopSphere</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+    <div class="auth-buttons">
+      <a href="login.html" class="btn">Login</a>
+      <a href="register.html" class="btn">Register</a>
+    </div>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-text">
+      <h2>Discover Your Next Favorite Product</h2>
+      <p>Shop the best items at unbeatable prices, only on ShopSphere.</p>
+      <a href="products.html" class="btn-primary">Start Shopping</a>
+    </div>
+    <div class="hero-image">
+      <img src="assets/images/hero.png" alt="Shopping Banner" />
+    </div>
+  </main>
+
+  <section class="featured-section">
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="featured-products">
+      <!-- JS inject products here -->
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 ShopSphere. All rights reserved.</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script>
+    const container = document.getElementById('featured-products');
+     
+    featured.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product-card';
+      div.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>₦${product.price.toLocaleString()}</p>
+        <a href="product-details.html?id=${product.id}" class="btn">View</a>
+      `;
+      container.appendChild(div);
+    });
+  </script>
+</body>
+</html>

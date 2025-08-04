@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f7f7;
+  color: #333;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+/* Page Title */
+.products-page-title {
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  color: #222;
+}
+
+/* Grid layout */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Default: 3 per row */
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+/* Product card */
+.product-card {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #eee;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin: 1rem 0 0.5rem;
+  text-align: center;
+  color: #111;
+}
+
+.product-card p {
+  font-size: 1rem;
+  text-align: center;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.product-card .btn {
+  display: block;
+  width: 80%;
+  margin: 0 auto 1rem;
+  padding: 0.6rem;
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: rgb(0, 145, 255);
+}
+
+.filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.filters input,
+.filters select {
+  padding: 10px;
+  font-size: 1rem;
+  width: 100%;
+  max-width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.product-grid {
+  min-height: 300px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+  align-items: start;
+}
+
+.no-results {
+  font-size: 1.2rem;
+  text-align: center;
+  color: #555;
+  padding: 100px 0;
+  grid-column: 1 / -1;
+}
+
+.not-found {
+  text-align: center;
+  padding: 60px 20px;
+  color: #555;
+  font-size: 1.2rem;
+  grid-column: 1 / -1;
+  min-height: 200px;
+}
+
+/* ✅ RESPONSIVE: Still 3 per row down to small devices */
+@media (max-width: 600px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* ✅ Optional: For very narrow screens (below ~380px), use 1 per row */
+@media (max-width: 380px) {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+}

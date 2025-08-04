@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fa;
+  color: #222;
+  line-height: 1.6;
+  padding-top: 80px; /* So content doesn't hide under fixed header */
+}
+
+/* === Header and Footer === */
+.main-header,
+.main-footer {
+  background-color: #1f2937;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.main-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.main-header .logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.main-header .logo img {
+  height: 40px;
+}
+
+.main-header h1 {
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #ddd;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #fff;
+}
+
+/* === Hero Section === */
+.hero-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  min-height: 70vh;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1 1 400px;
+}
+
+.hero-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+}
+
+.hero-text .btn-primary {
+  background-color: #1f2937;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.hero-text .btn-primary:hover {
+  background-color: #111827;
+}
+
+.hero-image {
+  flex: 1 1 400px;
+  text-align: center;
+}
+
+.hero-image img {
+  max-width: 90%;
+  height: auto;
+}
+
+/* === Featured Products === */
+.featured-section {
+  padding: 2rem;
+  background-color: #fff;
+}
+
+.featured-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #222;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 0 1rem;
+}
+
+.product-card {
+  background: #f1f5f9;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  max-width: 100%;
+  height: 150px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-card p {
+  color: #1f2937;
+  font-weight: bold;
+  margin-bottom: 0.8rem;
+}
+
+.product-card .btn {
+  display: block;
+  width: 80%;
+  margin: 0 auto 1rem;
+  padding: 0.6rem;
+  background-color: #1f2937;
+  color: #fff;
+  border: none;
+  text-align: center;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+  background-color: rgb(0, 145, 255);
+}
+
+/* === Footer === */
+.main-footer {
+  justify-content: center;
+  font-size: 0.9rem;
+  text-align: center;
+  margin-top: 4rem;
+}
+
+/* === Responsive Breakpoints === */
+@media (max-width: 992px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-header,
+  .main-footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+    margin-top: 0.5rem;
+    flex-wrap: wrap;
+  }
+
+  .hero-section {
+    flex-direction: column;
+    padding: 2rem 1rem;
+  }
+
+  .hero-text h2 {
+    font-size: 1.8rem;
+    margin-top: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .hero-text h2 {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .product-card img {
+    height: 120px;
+  }
+
+  .product-card .btn {
+    padding: 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .product-card h3 {
+    font-size: 1rem;
+  }
+}

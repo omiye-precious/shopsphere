@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ShopSphere - All Products</title>
+  <link rel="stylesheet" href="style.css" /> 
+  <link rel="stylesheet" href="products.css" /> 
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo">
+      <img src="../assets/images/logo.png" alt="ShopSphere Logo" />
+      <h1>ShopSphere</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+      <a href="admin.html">Admin</a>
+    </nav>
+  </header>
+
+  <!-- Page Title -->
+  <h2 class="products-page-title">All Products</h2>
+<section class="products-section">
+  <div class="filters">
+    <input type="text" id="searchInput" placeholder="Search products..." />
+    <select id="categoryFilter">
+      <option value="all">All Categories</option>
+      <option value="Electronics">Electronics</option>
+      <option value="Accessories">Accessories</option>
+      <option value="Bags">Bags</option>
+      <option value="Footwear">Footwear</option>
+      <option value="Clothing">Clothing</option>
+      <option value="Health">Health</option>
+      <option value="Gadgets">Gadgets</option>
+    </select>
+  </div>
+
+  <div class="product-grid" id="all-products">
+    <!-- Products will be injected by JS -->
+  </div>
+</section>
+
+  <!-- Product Grid -->
+  <section class="products-grid" id="all-products">
+    <!-- Products will be injected here by JS -->
+  </section>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <p>&copy; 2025 ShopSphere. All rights reserved.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="products.js"></script>
+  <script>
+    const allProductsContainer = document.getElementById("all-products");
+
+    function renderAllProducts() {
+      allProductsContainer.innerHTML = products.map(product => `
+        <div class="product-card">
+          <img src="../${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>₦${product.price.toLocaleString()}</p>
+          <a href="product-details.html?id=${product.id}" class="btn">View</a>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener("DOMContentLoaded", renderAllProducts);
+  </script>
+
+</body>
+</html>
