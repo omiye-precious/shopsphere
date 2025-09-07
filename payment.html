@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Payment Methods — ShopSphere</title>
+  <link rel="stylesheet" href="profile.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo"><img src="logo.PNG" alt="ShopSphere"/><h1>ShopSphere</h1></div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="profile-main">
+    <div class="profile-wrap">
+      <h2 class="page-title">Payment Methods</h2>
+      <p class="muted">Manage saved cards and default payment option.</p>
+
+      <section class="panel">
+        <div class="panel-body">
+          <div id="cards-list" class="cards-list"></div>
+          <hr/>
+          <h4>Add a card</h4>
+          <div class="add-card">
+            <input id="card-number" placeholder="Card number (digits only)" maxlength="19" />
+            <input id="card-name" placeholder="Name on card" />
+            <div class="row">
+              <input id="card-expiry" placeholder="MM/YY" maxlength="5" />
+              <input id="card-cvc" placeholder="CVC" maxlength="3" />
+            </div>
+            <div class="panel-actions">
+              <button id="add-card-btn" class="btn primary">Add card</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>© <span id="year"></span> ShopSphere</p>
+  </footer>
+
+  <script src="profile.js"></script>
+</body>
+</html>

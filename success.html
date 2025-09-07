@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Order Success — ShopSphere</title>
+  <link rel="stylesheet" href="success.css" />
+</head>
+<body>
+  <header class="ss-topbar" role="banner" aria-hidden="false">
+    <div class="ss-topbar-inner">
+      <img src="logo.PNG" alt="ShopSphere" class="ss-logo"/>
+      <span class="ss-brand">ShopSphere</span>
+    </div>
+  </header>
+
+  <main class="ss-main" id="main">
+    <section class="ss-container">
+      <div class="ss-hero" role="status" aria-live="polite">
+        <div class="ss-hero-left">
+          <div class="ss-badge" aria-hidden="true">✓</div>
+          <div class="ppp">
+            <h1 class="ss-title">Payment received</h1>
+            <p class="ss-small muted" id="placed-at">—</p>
+          </div>
+        </div>
+
+        <div class="ss-hero-right">
+          <div class="ss-quick">
+            <div class="q-label">Order No</div>
+            <div class="q-value" id="order-id">—</div>
+          </div>
+          <div class="ss-quick">
+            <div class="q-label">Status</div>
+            <div class="q-value" id="order-status">—</div>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="ss-grid">
+        <div class="ss-receipt" id="receipt">
+          <header class="receipt-head">
+            <div class="ppp">
+              <h2 class="receipt-title">Order receipt</h2>
+              <p class="muted small">Below are the items in your order. We'll handle shipping and keep you updated.</p>
+            </div>
+            <div class="receipt-actions">
+              <button id="print-invoice" class="btn outline">Print</button>
+              <a id="view-orders" class="btn ghost" href="orders.html">View orders</a>
+            </div>
+          </header>
+
+          <div id="order-summary" class="receipt-items" aria-live="polite">
+          </div>
+
+          <div class="receipt-note muted small">
+            <strong>Note:</strong> <span>If an item appears missing, contact support_shopsphere@gmail.com with your order ID.</span>
+          </div>
+        </div>
+        <aside class="ss-invoice" id="invoice-card" aria-label="Invoice summary">
+          <div class="invoice-inner">
+            <h3 class="invoice-title">Invoice</h3>
+
+            <div class="invoice-row">
+              <span class="inv-label">Subtotal</span>
+              <span id="summary-subtotal" class="inv-value">₦0</span>
+            </div>
+            <div class="invoice-row">
+              <span class="inv-label">Shipping</span>
+              <span id="summary-shipping" class="inv-value">₦0</span>
+            </div>
+            <div class="invoice-row">
+              <span class="inv-label">Tax</span>
+              <span id="summary-tax" class="inv-value">₦0</span>
+            </div>
+
+            <div class="invoice-divider" role="separator"></div>
+
+            <div class="invoice-row total">
+              <strong class="inv-label">Total</strong>
+              <strong id="summary-total" class="inv-value">₦0</strong>
+            </div>
+
+            <div class="invoice-block">
+              <h4 class="small">Shipping address</h4>
+              <div id="address-content" class="muted small">—</div>
+            </div>
+
+            <div class="invoice-block">
+              <h4 class="small">Payment method</h4>
+              <div id="payment-method" class="muted small">—</div>
+            </div>
+
+            <div class="invoice-actions">
+              <a id="continue-shopping" class="btn primary" href="products.html">Continue shopping</a>
+              <a class="btn secondary" href="profile.html">My profile</a>
+            </div>
+          </div>
+        </aside>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer ss-footer">
+    <div>© <span id="year">2025</span> ShopSphere. All rights reserved.</div>
+  </footer>
+  <script src="success.js"></script>
+</body>
+</html>

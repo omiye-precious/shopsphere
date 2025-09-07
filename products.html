@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSphere - All Products</title>
+  <link rel="stylesheet" href="products.css"/>
+</head>
+<body>
+
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.PNG" alt="ShopSphere Logo" />
+      <h1>ShopSphere</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html" class="active">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <h2 class="products-page-title">All Products</h2>
+
+  <section class="products-section">
+    <div class="filters">
+      <input type="text" id="searchInput" placeholder="Search products..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Accessories">Accessories</option>
+        <option value="Bags">Bags</option>
+        <option value="Footwear">Footwear</option>
+        <option value="Clothing">Clothing</option>
+        <option value="Health">Health</option>
+        <option value="Gadgets">Gadgets</option>
+      </select>
+    </div>
+
+   
+    <div class="product-grid" id="all-products">
+ 
+    </div>
+  </section>
+
+ 
+  <footer class="main-footer">
+    <p>&copy; 2025 ShopSphere. All rights reserved.</p>
+  </footer>
+
+ 
+  <script src="products.js"></script>
+  <script>
+    const allProductsContainer = document.getElementById("all-products");
+
+    function getCurrentUserId() {
+      const user = JSON.parse(localStorage.getItem("currentUser"));
+      return user?.id || null;
+    }
+
+    function addToCart(product) {
+      const userId = getCurrentUserId();
+      const cartKey = userId ? `cart_${userId}` : 'cart';
+
+      let cart = JSON.parse(localStorage.getItem(cartKey)) || [];
+
+      const existingItemIndex = cart.findIndex(item => item.id === product.id);
+
+      if (existingItemIndex !== -1) {
+        cart[existingItemIndex].quantity += 1;
+      } else {
+        cart.push({ ...product, quantity: 1 });
+      }
+
+      localStorage.setItem(cartKey, JSON.stringify(cart));
+      alert(`"${product.name}" added to cart.`);
+    }
+
+    function renderAllProducts() {
+      allProductsContainer.innerHTML = products.map(product => `
+        <div class="product-card">
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>₦${product.price.toLocaleString()}</p>
+          <button class="btn" onclick='addToCart(${JSON.stringify(product).replace(/'/g, "&apos;")})'>Add to Cart</button>
+        </div>
+      `).join('');
+    }
+
+    document.addEventListener("DOMContentLoaded", renderAllProducts);
+  </script>
+
+</body>
+</html>

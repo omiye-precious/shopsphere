@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Cart</title>
+  <link rel="stylesheet" href="cart.css" />
+  <style>
+    html, body {
+      height: 100%;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .wrapper {
+      flex: 1;
+    }
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.PNG" alt="ShopSphere Logo" />
+      <h1>ShopSphere</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html" class="active">Cart</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <div class="wrapper">
+    <main class="cart-page">
+      <h2>Your Shopping Cart</h2>
+      <div class="cart-container" id="cart-container">
+      </div>
+
+      <div class="cart-summary" id="cart-summary">
+      </div>
+
+      <div class="cart-actions">
+        <a href="products.html" class="btn">Continue Shopping</a>
+        <a href="checkout.html" class="btn-primary" id="checkout-btn">Proceed to Checkout</a>
+      </div>
+    </main>
+  </div>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 ShopSphere. All rights reserved.</p>
+  </footer>
+
+  <script src="cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ShopSphere - Home</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.PNG" alt="ShopSphere Logo"/>
+      <h1>ShopSphere</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+    <div class="auth-buttons" id="auth-area">
+
+    </div>
+  </header>
+
+  <main class="hero-section">
+    <div class="hero-text">
+      <h2>Discover Your Next Favorite Product</h2>
+      <p>Shop the best items at unbeatable prices, only on ShopSphere.</p>
+      <a href="products.html" class="btn-primary">Start Shopping</a>
+    </div>
+    <div class="hero-image">
+      <img src="cart.jpg" alt="Shopping Banner"/>
+    </div>
+  </main>
+  <section class="featured-section">
+    <h2>Featured Products</h2>
+    <div class="product-grid" id="featured-products">
+    </div>
+  </section>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 ShopSphere. All rights reserved.</p>
+  </footer>
+
+  <script src="products.js"></script>
+  <script>
+    const containerFeatured = document.getElementById('featured-products');
+    
+    const featuredProducts = products.slice(0, 4);
+
+    featuredProducts.forEach(product => {
+      const div = document.createElement('div');
+      div.className = 'product-card';
+      div.innerHTML = `
+        <img src="${product.image}" alt="${product.name}" />
+        <h3>${product.name}</h3>
+        <p>₦${product.price.toLocaleString()}</p>
+        <a href="product-details.html?id=${product.id}" class="btn">Add to Cart</a>
+      `;
+      containerFeatured.appendChild(div);
+    });
+
+
+    const authArea = document.getElementById("auth-area");
+    const currentUser = JSON.parse(localStorage.getItem("currentUser")); 
+
+    if (currentUser) {
+      authArea.innerHTML = `
+        <a href="profile.html" class="user-emoji">👤</a>
+      `;
+    } else {
+      authArea.innerHTML = `
+        <a href="login.html" class="btn">Login/Register</a>
+      `;
+    }
+  </script>
+</body>
+</html>

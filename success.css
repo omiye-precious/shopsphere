@@ -1,0 +1,358 @@
+
+:root{
+  --bg: #f7f7f7;
+  --panel: #ffffff;
+  --muted: #6b7280;
+  --text: #0f172a;
+  --brand: #085c94;       
+  --accent: #7c3aed;
+  --shadow-sm: 0 6px 18px rgba(2,6,23,0.06);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html,body{
+   margin:0; 
+   background:var(--bg); 
+}
+a{ 
+  text-decoration:none
+}
+
+.ss-topbar{
+  padding:14px 20px;
+  display:flex;
+  justify-content:center;
+}
+.ss-topbar-inner{
+   display:flex; 
+   align-items:center; 
+   gap:10px 
+  }
+.ss-logo{ 
+  height:44px; 
+}
+.ss-brand{ 
+  font-weight:700; 
+  color:var(--brand); 
+  font-size:1.05rem 
+}
+
+.ss-main{ 
+  padding:18px 16px 28px; 
+}
+.ss-container{ 
+  max-width:92%; 
+  margin:0 auto 
+}
+
+.ss-hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:18px;
+  padding:14px;
+  background:linear-gradient(180deg, rgba(8,92,148,0.04), rgba(124,58,237,0.02));
+  border-radius:10px;
+  border:1px solid rgba(8,92,148,0.06);
+  box-shadow:var(--shadow-sm);
+}
+.ss-hero-left{
+   display:flex; 
+   gap:14px; 
+   align-items:center 
+  }
+.ss-badge{
+  min-width:64px; 
+  min-height:64px;
+  border-radius:10px;
+  display:flex; 
+  align-items:center; 
+  justify-content:center;
+  font-size:28px; 
+  font-weight:700; 
+  color:white;
+  background:linear-gradient(135deg,var(--brand),var(--accent));
+  box-shadow: 0 8px 24px rgba(8,92,148,0.12);
+}
+.ss-title{ 
+  font-size:1.15rem; 
+  margin:0; 
+  color:var(--text)
+ }
+.ss-sub{ 
+  margin:6px 0 0 0; 
+  color:var(--muted)
+ }
+.ss-hero-right{ 
+  display:flex; 
+  gap:12px; 
+  align-items:center 
+}
+.ss-quick{ 
+  background:var(--panel); 
+  padding:8px 12px; 
+  border-radius:10px; 
+  box-shadow:var(--shadow-sm); 
+  text-align:center 
+}
+.q-label{ 
+  font-size:10px; 
+  color:var(--muted)
+ }
+.q-value{
+   font-weight:700; 
+   font-size:14px; 
+   color:var(--text) 
+  }
+
+.ss-grid{
+  display:grid;
+  grid-template-columns: 1fr 360px;
+  gap:20px;
+  margin-top:12px;
+  align-items:start;
+}
+
+.ss-receipt{
+  background:var(--panel);
+  padding:14px;
+  border-radius:12px;
+  box-shadow:var(--shadow-sm);
+  border:1px solid rgba(2,6,23,0.03);
+}
+.receipt-head{ 
+  display:flex; 
+  justify-content:space-between;
+  align-items:center; 
+  gap:12px; 
+  margin-bottom:12px 
+}
+.receipt-title{ 
+  margin:0; 
+  font-size:1.05rem 
+}
+.receipt-actions{ 
+  display:flex; 
+  gap:18px 
+}
+.btn{ 
+   align-items:center;
+   padding:8px 10px; 
+   border-radius:5px; 
+   font-weight:600; 
+   cursor:pointer;
+  }
+.btn.primary{
+  background-color: #085c94;
+  color: #fff;
+  }
+  .btn.primary:hover{
+    background-color: black;
+  }
+  .btn.secondary{
+    background-color: #eee;
+    color:var(--text);
+  }
+  .btn.btn.secondary:hover{
+    background-color: black;
+    color: #fff;
+  }
+.btn.outline{ 
+  background-color: #eee;
+  color:var(--text);
+  border: 0px;
+  font-size: 11px;
+ }
+ .btn.outline:hover{
+  background-color: black;
+  color:#fff;
+ }
+.btn.ghost{
+  background-color: #085c94;
+  color: #fff;
+  font-size: 11px;
+  }
+  .btn.ghost:hover{
+  background-color: black;
+  color:#fff;
+  }
+
+.receipt-items{ 
+  display:flex; 
+  flex-direction:column; 
+  gap:12px; 
+  margin-bottom:12px 
+}
+.summary-item{
+  display:flex; 
+  gap:12px; 
+  align-items:center; 
+  padding:12px; 
+  border-radius:10px; 
+  background:linear-gradient(180deg,#fff,#fafcff);
+  border:1px solid rgba(2,6,23,0.03);
+}
+.summary-item img{
+   width:72px; 
+   height:72px; 
+   object-fit:cover; 
+   border-radius:8px; 
+  }
+
+.summary-item h4{
+   margin:0; 
+   font-size:0.98rem 
+  }
+.summary-item p{ 
+  margin:6px 0 0 0; 
+  color:var(--muted); 
+  font-size:13px 
+}
+
+.invoice-inner{
+  background:linear-gradient(180deg,#fff,#fbfdff);
+  padding:16px;
+  border-radius:12px;
+  border:1px solid rgba(2,6,23,0.03);
+  box-shadow:var(--shadow-sm);
+}
+.invoice-title{ 
+  margin:0 0 10px 0; 
+  font-size:1rem
+ }
+.invoice-row{ 
+  display:flex; 
+  justify-content:space-between; 
+  align-items:center; 
+  padding:6px 0; 
+  color:var(--muted) 
+}
+.invoice-row.total{ 
+ color:var(--text); 
+ font-size:1rem; 
+ margin-top:8px; 
+}
+
+.invoice-block{ 
+  margin-top:10px; 
+  padding-top:4px; 
+  color:var(--muted) 
+}
+
+.invoice-actions{ 
+  display:flex; 
+  gap:8px; 
+  margin-top:12px; 
+}
+
+
+.ss-footer{ 
+  margin-top:22px; 
+  padding:18px; 
+  text-align:center; 
+  background:var(--brand); 
+  color:white; 
+}
+
+
+@media (max-width:980px){
+  .ss-grid{ 
+    grid-template-columns: 1fr 320px 
+  }
+  .summary-item img{ 
+    width:64px; 
+    height:64px 
+  }
+}
+@media (max-width:800px){
+  .ss-grid{ 
+    grid-template-columns: 1fr;
+   }
+  .ss-invoice{ 
+    order:2; 
+  }
+  .ss-receipt{ 
+    order:1; 
+  }
+  .ss-hero{ 
+    flex-direction:column; 
+    align-items:flex-start 
+  }
+  .ss-hero-right{ 
+    width:100%; 
+    display:flex; 
+    gap:8px 
+  }
+}
+@media (max-width:480px){
+   .ss-topbar .ss-topbar-inner img {
+    height: 35px;
+    width: auto;
+  }
+  .ss-brand{
+    font-size: 17px;
+  }
+  .ss-topbar{
+  display:flex;
+  justify-content:start;
+}
+.ss-badge{
+  min-width:55px; 
+  min-height:55px; 
+}
+.ss-title{ 
+  font-size:1rem; 
+ }
+.q-value{
+   font-weight:600; 
+   font-size:11px; 
+   color:var(--text) 
+  }
+  .receipt-head{
+    display: block;
+  }
+.ppp p{
+  font-size: 10px;
+}
+.summary-item h4{
+   font-size:0.7rem 
+  }
+.summary-item p{ 
+  font-size:11px 
+}
+.summary-item strong{
+  font-size: 12px;
+}
+.receipt-note strong{
+  font-size: 13px;
+}
+.receipt-note span{
+  font-size: 10px;
+}
+.invoice-actions{
+  font-size: 13px;
+  gap: 1rem;
+}
+}
+@media print{
+  body{ 
+    background:white; 
+    color:black 
+  }
+  .ss-topbar, .ss-footer, .receipt-actions, .invoice-actions { 
+    display:none !important 
+  }
+  .ss-grid{ 
+    grid-template-columns: 1fr !important 
+  }
+  .ss-receipt, .ss-invoice{ 
+    box-shadow:none; 
+    border:none; 
+    border-radius:0; 
+    background:transparent 
+  }
+  .summary-item{ 
+    page-break-inside:avoid 
+  }
+}

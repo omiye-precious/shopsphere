@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up - ShopSphere</title>
+  <link rel="stylesheet" href="signup.css" />
+</head>
+<body>
+  <div class="signup-container">
+    <form id="signup-form" class="signup-form">
+      <div class="signup-header">
+        <h2>Create Your Account</h2>
+        <a href="index.html" class="home-button">🏠</a>
+      </div>
+
+      <div class="input-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Presh" required />
+      </div>
+
+      <div class="input-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="your@mail.com" required />
+      </div>
+
+      <div class="input-group password-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Enter password" required />
+        <span class="toggle-password" data-target="password">👁</span>
+      </div>
+
+      <div class="input-group password-group">
+        <label for="confirm-password">Confirm Password</label>
+        <input type="password" id="confirm-password" placeholder="Confirm your password" required />
+        <span class="toggle-password" data-target="confirm-password">👁</span>
+      </div>
+
+      <button type="submit" class="btn">Sign Up</button>
+
+      <p class="login-link">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </form>
+  </div>
+  <script src="signup.js"></script>
+</body>
+</html>

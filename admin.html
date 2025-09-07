@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Admin — Manage Products</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <header>
+    <div class="brand">
+      <img src="logo.PNG" alt="ShopSphere logo" class="logo" />
+      <h1 class="site-title">ShopSphere Admin</h1>
+    </div>
+
+    <nav class="admin-actions">
+      <input id="searchInput" type="search" placeholder="Search products..." />
+      <select id="categoryFilter">
+        <option value="all">All Categories</option>
+        <option>Electronics</option>
+        <option>Accessories</option>
+        <option>Bags</option>
+        <option>Footwear</option>
+        <option>Clothing</option>
+        <option>Health</option>
+        <option>Gadgets</option>
+      </select>
+
+      <div class="action-buttons">
+        <button id="btn-add" class="btn primary"> Add product</button>
+        <a id="btn-home" class="btn ghost" href="index.html" style="color: #fff; font-size: 15px; font-weight: bold; text-decoration: none;">Home</a>
+        <button id="btn-logout" class="btn outline">Logout</button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="admin-main">
+    <section class="admin-wrap">
+      <div id="products-grid" class="products-grid"></div>
+      <div id="no-products" class="no-products" hidden>No products yet.</div>
+    </section>
+  </main>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-panel">
+      <header class="modal-head">
+        <h3 id="modal-title">Add product</h3>
+        <button id="modal-close" class="btn ghost">✖</button>
+      </header>
+
+      <form id="product-form" class="modal-body" autocomplete="off">
+        <input id="p-id" type="hidden" />
+
+        <label>
+          <span>Name</span>
+          <input id="p-name" type="text" required placeholder="Wireless Headphones" />
+        </label>
+
+        <label>
+          <span>Price (₦)</span>
+          <input id="p-price" type="number" min="0" step="0.01" required />
+        </label>
+
+        <label>
+          <span>Category</span>
+          <input id="p-category" type="text" placeholder="Electronics" />
+        </label>
+
+        <label class="full">
+          <span>Description</span>
+          <textarea id="p-desc" rows="3"></textarea>
+        </label>
+
+        <label>
+          <span>Image</span>
+          <input id="p-image" type="file" accept="image/*" />
+        </label>
+
+        <div id="preview-wrap" class="preview-wrap" hidden>
+          <img id="preview-img" alt="preview" />
+          <button id="clear-image" class="btn ghost" type="button">Remove</button>
+        </div>
+
+        <div class="modal-actions">
+          <button id="save-product" class="btn primary" type="submit">Save</button>
+          <button id="delete-product" class="btn outline hidden" type="button">Delete</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <footer class="admin-footer">
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>

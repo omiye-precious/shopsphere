@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>My Orders</title>
+  <link rel="stylesheet" href="orders.css" />
+</head>
+<body>
+  <header class="orders-top">
+    <div class="orders-top-inner">
+      <img src="logo.PNG" alt="ShopSphere" class="orders-logo"/>
+      <h1 class="logoname">ShopSphere</h1>
+      </div>
+      <div class="top-actions">
+        <a href="products.html" class="btn ghost">Continue shopping</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="orders-main">
+    <section class="orders-wrap">
+      <h1 class="page-title">My Orders</h1>
+
+      <div id="orders-list" class="orders-list" aria-live="polite">
+       
+      </div>
+
+      <div id="no-orders" class="no-orders" hidden>
+        <p>No orders found. Try making a purchase or check your <a href="profile.html">profile</a>.</p>
+        <a href="products.html" class="btn primary">Shop now</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="main-footer orders-footer">
+    <p>© <span id="year"></span> ShopSphere</p>
+  </footer>
+
+  <script src="orders.js"></script>
+</body>
+</html>

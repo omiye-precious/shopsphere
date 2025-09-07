@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Checkout - ShopSphere</title>
+  <link rel="stylesheet" href="checkout.css" />
+</head>
+<body>
+  <header class="main-header">
+    <div class="logo">
+      <img src="logo.PNG" alt="ShopSphere Logo" />
+      <h1>ShopSphere</h1>
+    </div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="products.html">Products</a>
+      <a href="cart.html">Cart</a>
+      <a href="profile.html">Profile</a>
+    </nav>
+  </header>
+
+  <main class="checkout-page">
+    <h2 class="page-title">Checkout</h2>
+
+    <div class="checkout-grid">
+      <section class="panel form-panel">
+        <h3>Shipping & Payment</h3>
+
+        <form id="checkout-form">
+          <div class="form-grid">
+            <div class="form-group">
+              <label for="fullName">Full name</label>
+              <input id="fullName" name="fullName" type="text" placeholder="Presh" required />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" placeholder="your@mail.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" placeholder="08136668348" required />
+            </div>
+
+         
+            <div class="form-group">
+              <label for="stateSel">State</label>
+              <select id="stateSel" required>
+                <option value="">Select State</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="citySel">City/Town</label>
+              <select id="citySel" required disabled>
+                <option value="">Select City / Town</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="lgaSel">Local Government Area</label>
+              <select id="lgaSel" required disabled>
+                <option value="">Select LGA</option>
+              </select>
+            </div>
+          </div>
+
+          <h4 style="margin-top:1rem;">Payment</h4>
+          <div class="payment-methods">
+            <label class="radio"><input type="radio" name="payMethod" value="card" checked /> Card</label>
+            <label class="radio"><input type="radio" name="payMethod" value="cod" /> Cash on Delivery</label>
+          </div>
+
+          <div id="card-fields" class="card-fields">
+            <div class="form-group">
+              <label for="cardNumber">Card number</label>
+              <input id="cardNumber" name="cardNumber" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456" />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="cardExpiry">MM/YY</label>
+                <input id="cardExpiry" name="cardExpiry" placeholder="08/27" maxlength="5" />
+              </div>
+
+              <div class="form-group">
+                <label for="cardCvc">CVC</label>
+                <input id="cardCvc" name="cardCvc" inputmode="numeric" maxlength="3" placeholder="123" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="cardName">Card Name</label>
+              <input id="cardName" name="cardName" type="text" placeholder="Presh" />
+            </div>
+          </div>
+
+          <p id="form-error" class="error" role="alert" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <aside class="panel summary-panel">
+        <h3>Order Summary</h3>
+
+        <div id="summary-items" class="summary-items"></div>
+
+        <div class="summary-line">
+          <span>Subtotal</span>
+          <strong id="subtotal">₦0</strong>
+        </div>
+
+        <div class="summary-line">
+          <span>Shipping</span>
+          <strong id="shipping">₦0</strong>
+        </div>
+
+        <div class="summary-line">
+          <span>Tax</span>
+          <strong id="tax">₦0</strong>
+        </div>
+
+        <div class="summary-total">
+          <span>Total</span>
+          <strong id="total">₦0</strong>
+        </div>
+
+        <div class="summary-actions">
+          <button id="place-order" class="btn primary" type="button" disabled>Place Order</button>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer class="main-footer">
+    <p>&copy; 2025 ShopSphere</p>
+  </footer>
+
+  <script src="checkout.js"></script>
+</body>
+</html>

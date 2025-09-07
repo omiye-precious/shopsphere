@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Forgot Password</title>
+  <link rel="stylesheet" href="forpass.css"/>
+</head>
+<body>
+  <div class="forgot-container">
+    <h2>Forgot Password?</h2>
+    <p>Enter your registered email address to reset your password.</p>
+
+    <form id="forgotForm">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <button type="submit" class="btn">Send Reset Link</button>
+    </form>
+
+    <p class="back-link">
+      <a href="login.html">← Back to Login</a>
+    </p>
+
+    <div id="message"></div>
+  </div>
+
+  <script src="forpass.js"></script>
+</body>
+</html>
