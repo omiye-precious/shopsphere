@@ -38,16 +38,16 @@ const saveBtn = document.getElementById('save-product');
 const deleteBtn = document.getElementById('delete-product');
 
 const FALLBACK_DEFAULTS = [
-  { id: 1, name: "Headphone", price: 199.99, image: "/cart/images/headphone.jpg", description: "High-quality wireless headphones with noise cancellation.", category: "Electronics" },
-  { id: 2, name: "Smart Watch", price: 149.99, image: "/cart/images/watch.jpg", description: "Track your fitness and stay connected on the go.", category: "Accessories" },
-  { id: 3, name: "Mouse", price: 49.99, image: "/cart/images/mouse.jpg", description: "Ergonomic design with customizable buttons and RGB lighting.", category: "Electronics" },
-  { id: 4, name: "Backpack", price: 39.99, image: "/cart/images/backpack.jpg", description: "Stylish and durable backpack with laptop compartment.", category: "Bags" },
-  { id: 5, name: "Speaker", price: 89.99, image: "/cart/images/speaker.jpg", description: "Portable speaker with deep bass and long battery life.", category: "Electronics" },
-  { id: 6, name: "Shoes", price: 129.99, image: "/cart/images/shoe.jpg", description: "Comfortable and breathable running shoes for daily use.", category: "Footwear" },
-  { id: 7, name: "Sunglasses", price: 29.99, image: "/cart/images/sunglasses.jpg", description: "Timeless design with UV protection.", category: "Accessories" },
-  { id: 8, name: "T-Shirt", price: 19.99, image: "/cart/images/shirt.jpg", description: "Cotton t-shirt with cool prints and a relaxed fit.", category: "Clothing" },
-  { id: 9, name: "Fit Tracker", price: 59.99, image: "/cart/images/fitness.jpg", description: "Track your steps, heart rate, and sleep quality.", category: "Health" },
-  { id: 10, name: "Mini Drone", price: 299.99, image: "/cart/images/drone.jpg", description: "Lightweight drone with HD camera and easy controls.", category: "Gadgets" }
+  { id: 1, name: "Headphone", price: 199.99, image: "headphone.jpg", description: "High-quality wireless headphones with noise cancellation.", category: "Electronics" },
+  { id: 2, name: "Smart Watch", price: 149.99, image: "watch.jpg", description: "Track your fitness and stay connected on the go.", category: "Accessories" },
+  { id: 3, name: "Mouse", price: 49.99, image: "mouse.jpg", description: "Ergonomic design with customizable buttons and RGB lighting.", category: "Electronics" },
+  { id: 4, name: "Backpack", price: 39.99, image: "backpack.jpg", description: "Stylish and durable backpack with laptop compartment.", category: "Bags" },
+  { id: 5, name: "Speaker", price: 89.99, image: "speaker.jpg", description: "Portable speaker with deep bass and long battery life.", category: "Electronics" },
+  { id: 6, name: "Shoes", price: 129.99, image: "shoe.jpg", description: "Comfortable and breathable running shoes for daily use.", category: "Footwear" },
+  { id: 7, name: "Sunglasses", price: 29.99, image: "sunglasses.jpg", description: "Timeless design with UV protection.", category: "Accessories" },
+  { id: 8, name: "T-Shirt", price: 19.99, image: "shirt.jpg", description: "Cotton t-shirt with cool prints and a relaxed fit.", category: "Clothing" },
+  { id: 9, name: "Fit Tracker", price: 59.99, image: "fitness.jpg", description: "Track your steps, heart rate, and sleep quality.", category: "Health" },
+  { id: 10, name: "Mini Drone", price: 299.99, image: "drone.jpg", description: "Lightweight drone with HD camera and easy controls.", category: "Gadgets" }
 ];
 
 const DEFAULT_IDS = new Set(FALLBACK_DEFAULTS.map(p => String(p.id)));
@@ -342,4 +342,5 @@ window.addEventListener('storage', (e) => {
 
 document.addEventListener('DOMContentLoaded', () => {
   renderProducts();
+
 });
